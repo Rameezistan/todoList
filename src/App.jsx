@@ -10,8 +10,8 @@ function App() {
 
   //Task ToDo List State
   const [toDo, setToDo] = useState([
-    {id: 1, "title": "Task 1", "status": true},
-    {id: 2, title: "Task 2", "status": false},
+    {"id": 1, "title": "Task 1", status: true},
+    {"id": 2, "title": "Task 2", status: true},
   ])
   //Temp State
   const [newTask, setNewTask] = useState('');
@@ -66,7 +66,7 @@ function App() {
             <React.Fragment key={task.id}>
 
               <div className="col taskBg">
-                <div className={task.status ? 'done': ''}>
+                <div className={task.status ? "done": ''}>
               <span className="taskNumber">{index + 1}</span>
               <span className="taskTest">{task.title}</span>
 
