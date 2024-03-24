@@ -10,7 +10,7 @@ function App() {
 
   //Task ToDo List State
   const [toDo, setToDo] = useState([
-    {id: 1, title: "Task 1", status: false},
+    {id: 1, title: "Task 1", status: true},
     {id: 2, title: "Task 2", status: false},
   ])
   //Temp State
@@ -65,10 +65,17 @@ function App() {
           return(
             <React.Fragment key={task.id}>
 
-              <div className="col taskBg">
+               <div className="col taskBg">
                 <div className={task.status ? 'done': ''}>
                   <span className="taskNumber">{index + 1}</span>
                   <span className="taskTest">{task.title}</span>
+                </div>
+                <div className="iconsWrap">
+                  <span>
+                    <FontAwesomeIcon icon={faCircleCheck} />
+                  </span>
+                  <span></span>
+                  <span></span>
                 </div>
               </div>
 
