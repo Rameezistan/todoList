@@ -10,8 +10,8 @@ function App() {
 
   //Task ToDo List State
   const [toDo, setToDo] = useState([
-    {"id": 1, "title": "Task 1", status: true},
-    {"id": 2, "title": "Task 2", status: true},
+    {id: 1, title: "Task 1", status: false},
+    {id: 2, title: "Task 2", status: false},
   ])
   //Temp State
   const [newTask, setNewTask] = useState('');
@@ -58,7 +58,7 @@ function App() {
         <br /><br />
         
         {/* TodoTasks */}
-        {toDo && toDo.length ? '' : 'No Tasks....'}
+        { toDo && toDo.length ? '' : 'No Tasks....'}
 
         {toDo && toDo
         .map( (task, index) =>{
@@ -66,17 +66,17 @@ function App() {
             <React.Fragment key={task.id}>
 
               <div className="col taskBg">
-                <div className={task.status ? "done": ''}>
-              <span className="taskNumber">{index + 1}</span>
-              <span className="taskTest">{task.title}</span>
-
+                <div className={task.status ? 'done': ''}>
+                  <span className="taskNumber">{index + 1}</span>
+                  <span className="taskTest">{task.title}</span>
                 </div>
               </div>
 
             </React.Fragment>
           )
-        }
-        )}
+        })
+      }
+      
       </div>
 
 
