@@ -23,6 +23,7 @@ body {
 .taskBg div{
     display: flex;
     align-items: center;
+    background-color: #555;
 }
 .taskNumber{
     color: #999;
@@ -42,6 +43,10 @@ body {
     opacity: 0.3;
     flex: 1;
 }   
+
+.taskTest {
+    background-color: #555;
+}
 
 .done{
     text-decoration: line-through;
