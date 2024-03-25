@@ -29,6 +29,7 @@ body {
     color: #999;
     border: 1px solid #999;
     border-radius: 50%;
+    background-color: #555 ;
     width: 26px;
     height: 26px;
     display: flex;
@@ -38,7 +39,7 @@ body {
     align-items: center;
     justify-content: center;
 }
-.taskBg .done .taskText {
+.taskBg .done .taskTest {
     text-decoration: line-through;
     opacity: 0.3;
     flex: 1;
@@ -52,4 +53,37 @@ body {
     text-decoration: line-through;
     opacity: 0.3;
     flex: 1;
+}
+
+.iconsWrap{
+    background-color: #555;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    width: auto;
+    display: inline-block;
+}
+
+/* .iconsWrap span{
+    background-color: #555;
+    
+} */
+
+.taskBg .iconsWrap span{
+    display: inline-block;
+    margin: 0px 10px 0 10px;
+    cursor: pointer;
+    color: #123eec;
+    background-color: transparent;
+}
+.taskBg .iconsWrap span svg{
+    background-color: transparent;
+}
+.taskBg .iconsWrap span svg path{
+    color: #00ff89;
+}
+
+.taskBg .iconsWrap span svg path:hover{
+    color: yellow;
 }

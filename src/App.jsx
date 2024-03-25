@@ -74,8 +74,13 @@ function App() {
                   <span>
                     <FontAwesomeIcon icon={faCircleCheck} />
                   </span>
-                  <span></span>
-                  <span></span>
+                  <span>
+                  <FontAwesomeIcon icon={faPen} />
+                  </span>
+                  <span>
+                  <FontAwesomeIcon icon={faTrashCan} />
+
+                  </span>
                 </div>
               </div>
 
