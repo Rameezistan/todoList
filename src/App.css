@@ -45,6 +45,10 @@ body {
     flex: 1;
 }   
 
+.taskBg .taskTest {
+    flex: 1;
+}
+
 .taskTest {
     background-color: #555;
 }
@@ -52,7 +56,6 @@ body {
 .done{
     text-decoration: line-through;
     opacity: 0.3;
-    flex: 1;
 }
 
 .iconsWrap{

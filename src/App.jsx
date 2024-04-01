@@ -11,7 +11,7 @@ function App() {
   //Task ToDo List State
   const [toDo, setToDo] = useState([
     {id: 1, title: "Task 1", status: false},
-    {id: 2, title: "Task 2", status: false},
+    {id: 2, title: "Task 2", status: false}
   ])
   //Temp State
   const [newTask, setNewTask] = useState('');
@@ -57,10 +57,40 @@ function App() {
         <h2>To Do list (ReactJS)</h2>
         <br /><br />
         
+        {/* Update Task */}
+        <div className="row">
+          <div className="col">
+            <input className='form-control form-control-lg'/>
+          </div>
+          <div className="col-auto">
+            <button className='btn btn-lg btn-success mr-20'>
+              Update
+            </button>
+            <button className='btn btn-lg btn-warning'>
+              Cancel
+            </button>
+          </div>
+        </div>
+        <br />
+
+        {/*Add Task */}
+        <div className="row">
+          <div className="col">
+            <input className='form-control form-control-lg'/>
+          </div>
+          <div className="col-auto">
+            <button className='btn btn-lg btn-success'>
+              Add Task
+            </button>
+          </div>
+        </div>
+        <br />
+
         {/* TodoTasks */}
         { toDo && toDo.length ? '' : 'No Tasks....'}
 
         {toDo && toDo
+        .sort((a,b) => a.id > b.id ? 1 : -1)
         .map( (task, index) =>{
           return(
             <React.Fragment key={task.id}>
@@ -71,13 +101,13 @@ function App() {
                   <span className="taskTest">{task.title}</span>
                 </div>
                 <div className="iconsWrap">
-                  <span>
+                  <span title='Completed / Not Completed'>
                     <FontAwesomeIcon icon={faCircleCheck} />
                   </span>
-                  <span>
+                  <span title='Edit'>
                   <FontAwesomeIcon icon={faPen} />
                   </span>
-                  <span>
+                  <span title='Delete'>
                   <FontAwesomeIcon icon={faTrashCan} />
 
                   </span>
