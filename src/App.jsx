@@ -76,7 +76,10 @@ function App() {
         {/*Add Task */}
         <div className="row">
           <div className="col">
-            <input className='form-control form-control-lg'/>
+            <input 
+              value={newTask}
+              onChange={ (e) => setNewTask }
+            className='form-control form-control-lg'/>
           </div>
           <div className="col-auto">
             <button className='btn btn-lg btn-success'>
